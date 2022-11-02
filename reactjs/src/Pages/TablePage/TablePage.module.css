@@ -1,0 +1,12 @@
+#PageWrapper {
+  width: 95vw;
+  height: 95vh;
+  padding: 5vh 0vw 0vw 5vw;
+}
+
+.TableDynamic thead th:nth-child(n){
+  border: 1px solid #000000;
+}
+.TableDynamic tbody tr td:nth-child(n){
+  border: 1px solid #000000;
+}

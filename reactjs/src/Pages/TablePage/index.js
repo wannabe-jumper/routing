@@ -10,12 +10,15 @@ import * as dataConstants from "./constants"
 // ===================== Main function =====================
 function TablePage() {
 
+  // =================== Constants and variable
   const tableData=dataConstants.dataStructure // to store the tabledata in local variable
   const cloneDeep=require('clone-deep'); // defining a constant to have the clone deep functionality
   const tableBody = cloneDeep(tableData.body) // storing the array of key value pair objects(list of row in key value pair)
   const keys=Object.keys(tableData.header) // constant to store the keys of every header
   var rowSpan = keys.map(() => 1) // An array variable to count the rowspan
+  const [clickedRows,setClcikedRows] = React.useState([]) // An list to store the list of rows clicked
 
+  // =================== Functions
   const SpanFinder = (rowIndex,colIndex) => {
     /*
       Input is the current cell's row and column indexes 
@@ -30,6 +33,22 @@ function TablePage() {
     rowSpan[colIndex]=index-rowIndex // updating the list with the new rowspan of each cell
     return index-rowIndex
   }
+  const CellClicked = (rowIndex,colIndex) => {
+    /*
+      Unfinished function to store the clicked cells
+    */
+    var tempList = cloneDeep(clickedRows)
+    var isPresent = clickedRows.filter((obj) => {
+      if(JSON.stringify(tableBody[rowIndex])==JSON.stringify(obj))
+        return obj
+    })
+    if(Object.keys(isPresent).length==0){
+      for(let i=0;i<SpanFinder(rowIndex,colIndex);i++){
+        tempList.push(tableBody[rowIndex+i])
+      }
+    }
+    setClcikedRows(tempList)
+  }
 
   // =================== Main return statement ===================
   return (
@@ -37,7 +56,7 @@ function TablePage() {
       <table className={`${styles.TableDynamic}`}>
         {/* table header */}
         <thead>
-          {keys.map((element,rowIndex) => {
+          {keys.map((element) => {
             return <th>{element}</th>
           })}
         </thead>
@@ -53,7 +72,7 @@ function TablePage() {
                 rowSpan[colIndex]--
               }
               else{
-                return <td rowSpan={SpanFinder(rowIndex,colIndex)}>
+                return <td rowSpan={SpanFinder(rowIndex,colIndex)} onClick={() => CellClicked(rowIndex,colIndex)}>
                 {row[elementKey]}
               </td>
               }

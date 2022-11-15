@@ -1,0 +1,186 @@
+#PageWrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: #DBDDD0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.robot{
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: fit-content;
+  width: 50%;
+}
+.robot:hover {
+  animation: shaking 3s linear infinite;
+}
+@keyframes shaking {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+
+@keyframes changeLetter {
+  0% {
+    content: "!";
+  }
+  78.5% {
+    content: "!";
+  }
+  79% {
+    content: "T";
+  }
+  79.5% {
+    content: "Th";
+  }
+  80% {
+    content: "Thi";
+  }
+  80.5% {
+    content: "This";
+  }
+  81% {
+    content: "This ";
+  }
+  81.5% {
+    content: "This R";
+  }
+  82% {
+    content: "This R2";
+  }
+  82.5% {
+    content: "This R2D";
+  }
+  83% {
+    content: "This R2D2";
+  }
+  83.5% {
+    content: "This R2D2 ";
+  }
+  84% {
+    content: "This R2D2 b";
+  }
+  84.5% {
+    content: "This R2D2 ba";
+  }
+  85% {
+    content: "This R2D2 bas";
+  }
+  85.5% {
+    content: "This R2D2 base";
+  }
+  86% {
+    content: "This R2D2 basel";
+  }
+  86.5% {
+    content: "This R2D2 baseli";
+  }
+  87% {
+    content: "This R2D2 baselin";
+  }
+  87.5% {
+    content: "This R2D2 baseline";
+  }
+  88% {
+    content: "This R2D2 baseline ";
+  }
+  88.5% {
+    content: "This R2D2 baseline w";
+  }
+  89% {
+    content: "This R2D2 baseline wi";
+  }
+  89.5% {
+    content: "This R2D2 baseline wil";
+  }
+  90% {
+    content: "This R2D2 baseline wil";
+  }
+  90.5% {
+    content: "This R2D2 baseline will";
+  }
+  91% {
+    content: "This R2D2 baseline will ";
+  }
+  91.5% {
+    content: "This R2D2 baseline will b";
+  }
+  92% {
+    content: "This R2D2 baseline will be";
+  }
+  92.5% {
+    content: "This R2D2 baseline will be ";
+  }
+  93% {
+    content: "This R2D2 baseline will be a";
+  }
+  93.5% {
+    content: "This R2D2 baseline will be ac";
+  }
+  94% {
+    content: "This R2D2 baseline will be act";
+  }
+  94.5% {
+    content: "This R2D2 baseline will be acti";
+  }
+  95% {
+    content: "This R2D2 baseline will be activ";
+  }
+  95.5% {
+    content: "This R2D2 baseline will be active";
+  }
+  96% {
+    content: "This R2D2 baseline will be active ";
+  }
+  96.5% {
+    content: "This R2D2 baseline will be active t";
+  }
+  97% {
+    content: "This R2D2 baseline will be active to";
+  }
+  97.5% {
+    content: "This R2D2 baseline will be active tom";
+  }
+  98% {
+    content: "This R2D2 baseline will be active tomo";
+  }
+  98.5% {
+    content: "This R2D2 baseline will be active tomor";
+  }
+  99% {
+    content: "This R2D2 baseline will be active tomorr";
+  }
+  99.5% {
+    content: "This R2D2 baseline will be active tomorro";
+  }
+  100% {
+    content: "This R2D2 baseline will be active tomorrow";
+  }
+}
+
+.element {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: fit-content;
+  width: 50%;
+  font-size: 12px;
+}
+
+.element:after {
+  animation: changeLetter 3s linear;
+  display: block;
+  content: "This R2D2 baseline will be active tomorrow";
+}

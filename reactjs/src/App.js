@@ -9,6 +9,7 @@ import LoginPage from './Pages/loginPage';
 import Page1 from './Pages/page1';
 import TablePage from './Pages/TablePage';
 import Animation from "./Pages/Animation"
+import FigmaTable from "./Pages/FigmaTable"
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route exact path='/Page1' element={<Page1/>} />
         <Route exact path='/TablePage' element={<TablePage/>} />
         <Route exact path='/Animation' element={<Animation/>} />
+        <Route exact path='/FigmaTable' element={<FigmaTable/>} />
       </Routes>
     </Router>
   );

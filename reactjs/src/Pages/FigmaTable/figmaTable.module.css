@@ -1,0 +1,144 @@
+#PageWrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: #FFFFFF;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tableStyles {
+  border-collapse: collapse;
+}
+
+.tableStyles thead{
+  background: #0000A00D;  
+}
+
+.tableStyles tbody tr:nth-child(n){
+  border-bottom: 1px solid #C5C7EC;
+}
+.tableStyles thead th:nth-child(n){
+  min-width: 125px;
+  height: 50px;
+  padding: 0px;
+  /* border: 2px solid #000000; */
+}
+.tableStyles tbody tr td:nth-child(n){
+  min-width: 125px;
+  height: 50px;
+  padding: 0px;
+  /* border: 1px solid #000000; */
+}
+
+#HeaderWrapperDiv{
+  width: 100%;
+  height: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+#HeaderString{
+  font-family: "Calibri";
+  font-size: 11px;
+  font-weight: 800;
+  text-align: center;
+  color: #0000A0;
+}
+
+#BodyWrapperDiv{
+  width: 100%;
+  height: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+#BodyString{
+  font-family: "Calibri";
+  font-size: 10px;
+  font-weight: 400;
+  text-align: center;
+  color: #0000A0;
+}
+#BodyInput{
+  height: 35px;
+  width: 100px;
+  border-radius: 12px;
+  border: 1px solid #0000A0;
+}
+#BodyToggleOuter{
+  width: 26px;
+  border: 1px solid #0000A0;
+  border-radius: 12px;
+  background-color: #FFFFFF;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0px 4px 0px 4px;
+  cursor: pointer;
+}
+#BodyToggleInner{
+  width: 15px;
+  background-color: #0000A0;
+  border-radius: 50%;
+  height: 15px;
+}
+
+.BodyinfoIcon{
+  width: 12px;
+  background-color: #0000A0;
+  border-radius: 50%;
+  height: 12px;
+  color: #FFFFFF;
+  font-family: "Calibri";
+  font-size: 9px;
+  font-weight: 400;
+  text-align: center;
+  margin-left: 2px;
+  position: relative;
+}
+/* .BodyinfoTooltip{
+  visibility: hidden;
+  position: absolute;
+  z-index: 1;
+  color: #0000A0;
+  font-family: "Calibri";
+  font-size: 9px;
+  font-weight: 400;
+}
+.BodyinfoTooltip :hover{
+  visibility: visible
+} */
+
+.BodyinfoIcon .BodyinfoTooltip {
+  visibility: hidden;
+  width: 120px;
+  background-color: #0000A0;
+  color: #FFFFFF;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.BodyinfoIcon .BodyinfoTooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #0000A0 transparent transparent transparent;
+}
+
+.BodyinfoIcon:hover .BodyinfoTooltip {
+  visibility: visible;
+  opacity: 1;
+}

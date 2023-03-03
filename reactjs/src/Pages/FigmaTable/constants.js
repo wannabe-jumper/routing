@@ -1,0 +1,55 @@
+export const dummyData = {
+  tableData:{
+    header:{
+      "material":"Material",
+      "site":"Site",
+      "pram_name":"Parameter name",
+      "current_Val":"Current Value",
+      "expected_val":"Expected value",
+      "rule_num":"Rule Number",
+      "rule_desc": "Rule Description",
+      "writeback":"Writeback",
+      "comment":"Comment",
+    },
+    body:[
+      {
+        "material":"Material",
+        "site":"Site",
+        "pram_name":"Parameter name",
+        "current_Val":100,
+        "expected_val":"",
+        "rule_num":"Rule Number",
+        "rule_desc": "Rule Description",
+        "writeback":0,
+        "comment":"",
+      },
+      {
+        "material":"Material",
+        "site":"Site",
+        "pram_name":"Parameter name",
+        "current_Val":20,
+        "expected_val":200,
+        "rule_num":"Rule Number",
+        "rule_desc": "Rule Description",
+        "writeback":0,
+        "comment":"",
+      },
+      {
+        "material":"Material",
+        "site":"Site",
+        "pram_name":"Parameter name",
+        "current_Val":1299,
+        "expected_val":"",
+        "rule_num":"Rule Number",
+        "rule_desc": "Rule Description",
+        "writeback":1,
+        "comment":"",
+      }
+    ],
+    toggleCols:["writeback"],
+    willHaveHover:["writeback"],
+    inputCell:["expected_val","comment"],
+    isCompare:["current_Val"],
+    compareTo:["expected_val"],
+  }
+}
